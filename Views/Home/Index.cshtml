@@ -1,0 +1,26 @@
+﻿@model Contratado
+
+@{
+    ViewData["Title"] = "Formulário de contratação";
+}
+
+<form asp-controller="Home" asp-action="Index" method="post">
+    <div class="mb-3">
+        <label asp-for="NomeContratado" for="nomeContratado" class="form-label">Nome do Contratado <span style="color: red;">*</span></label>
+        <input asp-for="NomeContratado" type="text" id="nomeContratado" class="form-control" required></input>
+    </div>
+    <div class="mb-3">
+        <label asp-for="CPF" for="cpfContratado" class="form-label">CPF do Contratado <span style="color: red;">*</span></label>
+        <input asp-for="CPF" type="text" id="cpfContratado" class="form-control" aria-describedby="cpfHelp" required></input>
+        <div id="cpfHelp" class="form-text">Nós nunca iremos compartilhar o seu CPF com ninguém.</div>
+    </div>
+    <div class="mb-3">
+        <label asp-for="Setor" for="setorContratado" class="form-label">Setor <span style="color: red;">*</span></label>
+        <input asp-for="Setor" type="text" id="setorContratado" class="form-control" required></input>
+    </div>
+    <div class="mb-3">
+        <label asp-for="Cargo" for="cargoContratado" class="form-label">Cargo <span style="color: red;">*</span></label>
+        <input asp-for="Cargo" type="text" id="cargoContratado" class="form-control" required></input>
+    </div>
+    <button type="submit" class="btn btn-primary">Enviar</button>
+</form>
